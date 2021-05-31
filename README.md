@@ -83,9 +83,9 @@ The following exploratory analysis and data visualizations are shown to display 
 This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price. 
 
 #### Would there be a great price difference whether or not a home is on the waterfront?
-'''{python}
+```{python}
  print('This is a code snippet from python!')
-'''
+```
 <br>
 
 This barchart shows that waterfront homes are significantly more expensive than homes not on the waterfront. 
