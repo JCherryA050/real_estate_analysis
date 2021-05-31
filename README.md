@@ -58,33 +58,35 @@ Of all the numerical variables, the one one house with 33 bedrooms and only 1620
 # Feature Engineering
 
 Some of the features within the data were recategorized to form a more complete understanding of the features that had a seemingly large impact on sale price. The major feature being the grade of the house. A new feature was made based on the grade of the house using the following schema:
-- 'low' (grade < 3): Houses falling short of building design specifications.
-- 'medium' (): houses with an overall average quality.
-- 'high' (grade >= 11): Houses with a high quality of design.
+- **low** (< 3): Houses falling short of building design specifications.
+- **medium** : Houses with an overall average quality.
+- **high** (>= 11): Houses with a high quality of design.
 **TODO: add other features that were engineered for modeling**
 <br>
 
 # Exploratory Data Analysis
 
-The following exploratory analysis and data visualizations are shown to display the relationships between the features and the sale price. The purpose is to identify potential features that would have a high impact on the sale price and could potentially be used as predictors in our models. Through our exploratory analysis, the following questions were answered:
+The following exploratory analysis and data visualizations are shown to display the relationships between the features and the sale price. The purpose is to identify potential features that would have a high impact on the sale price and could potentially be used as predictors in our models.
 
-- Should a seller consider what time of year to list there home? Should a buyer consider when to buy a home?
+**Correlation** The following correlation table gives a summary of the features' correlation with the sale price of a house and each other. The table can be used to define the features that have a strong linear relationship with the sale price making them candidates for potential predictors in our models:
 
-![title](images/king_county_1.jpeg)
+
+
+**Considering Month Sold** Should a seller consider what time of year to list there home? Should a buyer consider when to buy a home? It looks like the most home were sold in May over the two year period of data we have. Home sales look to be hot in the spring and summer months, and slow down only slighlty in the fall and more so in the winter. 
+<br>
+![title](images/sales_per_month.jpeg)
 <br>
 
-It looks like the most home were sold in May over the two year period of data we have. Home sales look to be hot in the spring and summer months, and slow down only slighlty in the fall and more so in the winter. 
 
- - Do the number of bathrooms have an effect on the price of the house
-
-![title](images/king_county_1.jpeg)
-<br>
+- Do the number of bathrooms have an effect on the price of the house?
 
 This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price. 
 
 #### Would there be a great price difference whether or not a home is on the waterfront?
 
-![title](images/king_county_1.jpeg)
+<<engine='python', engine.path='python3'>>=
+# print('this is python code in action')
+@
 <br>
 
 This barchart shows that waterfront homes are significantly more expensive than homes not on the waterfront. 
