@@ -62,7 +62,6 @@ Some of the features within the data were recategorized to form a more complete 
 - **medium** : Houses with an overall average quality.
 - **high** (>= 11): Houses with a high quality of design.
 **TODO: add other features that were engineered for modeling**
-<br>
 
 # Exploratory Data Analysis
 
@@ -73,13 +72,10 @@ The following exploratory analysis and data visualizations are shown to display 
 
 
 **Considering Month Sold** Should a seller consider what time of year to list there home? Should a buyer consider when to buy a home? It looks like the most home were sold in May over the two year period of data we have. Home sales look to be hot in the spring and summer months, and slow down only slighlty in the fall and more so in the winter. 
-<br>
 ![title](images/sales_per_month.png)
-<br>
 
 
 - Do the number of bathrooms have an effect on the price of the house?
-<br>
 ![title](images/sales_per_bathroom.png)
 
 
@@ -87,26 +83,23 @@ This scatter shows a positive relationship between square feet and sales price. 
 
 #### Would there be a great price difference whether or not a home is on the waterfront?
 ![title](images/sales_per_waterfront.png)
-<br>
 
 This barchart shows that waterfront homes are significantly more expensive than homes not on the waterfront. 
 #### Would there be a great price difference whether or not a home is renovated?
 ![title](images/sales_per_renovated.png)
-
-<br>
 
 This barchart shows that renovated homes increase the price of a home as you can see by the mean sales price of home renovated vs those that are not renovated.
 
 #### Do prices of homes increase in certain areas of King County?
 
 ![title](images/sales_heatmap.jpeg)
-<br>
+
 As we see from the heatmap, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
 
 #### Is there a particular zipcode that tends to sell pricier homes?
 
 ![title](images/sales_zipcode.jpeg)
-<br>
+
 This chart shows the mean price of a home in each zipcode. The mean price tends to go up as you get closer to Bellevue, Mercer Island, and Seattle. 
 
 # Preprocessing and More Feature Engineering for Modeling
