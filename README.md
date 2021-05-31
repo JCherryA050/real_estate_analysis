@@ -85,7 +85,7 @@ This scatter shows a positive relationship between square feet and sales price. 
 #### Would there be a great price difference whether or not a home is on the waterfront?
 
 <<engine='python', engine.path='python3'>>=
-# print('this is python code in action')
+print('this is python code in action')
 @
 <br>
 
