@@ -95,6 +95,8 @@ As we see from the heatmap, home prices increase as you move north in King Count
 
 #### Is there a particular zipcode that tends to sell pricier homes?
 
+![title](images/king_county_1.jpeg)
+<br>
 This chart shows the mean price of a home in each zipcode. The mean price tends to go up as you get closer to Bellevue, Mercer Island, and Seattle. 
 
 # Preprocessing and More Feature Engineering for Modeling
