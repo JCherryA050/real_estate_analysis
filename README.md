@@ -79,31 +79,33 @@ The following exploratory analysis and data visualizations are shown to display 
 
 
 - Do the number of bathrooms have an effect on the price of the house?
+<br>
+![title](images/sales_per_bathroom.png)
+
 
 This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price. 
 
 #### Would there be a great price difference whether or not a home is on the waterfront?
-```{python}
- print('This is a code snippet from python!')
-```
+![title](images/sales_per_waterfront.png)
 <br>
 
 This barchart shows that waterfront homes are significantly more expensive than homes not on the waterfront. 
+#### Would there be a great price difference whether or not a home is renovated?
+![title](images/sales_per_renovated.png)
 
-![title](images/king_county_1.jpeg)
 <br>
 
 This barchart shows that renovated homes increase the price of a home as you can see by the mean sales price of home renovated vs those that are not renovated.
 
 #### Do prices of homes increase in certain areas of King County?
 
-![title](images/king_county_1.jpeg)
+![title](images/sales_heatmap.jpeg)
 <br>
 As we see from the heatmap, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
 
 #### Is there a particular zipcode that tends to sell pricier homes?
 
-![title](images/king_county_1.jpeg)
+![title](images/sales_zipcode.jpeg)
 <br>
 This chart shows the mean price of a home in each zipcode. The mean price tends to go up as you get closer to Bellevue, Mercer Island, and Seattle. 
 
