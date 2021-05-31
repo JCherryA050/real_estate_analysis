@@ -74,7 +74,7 @@ The following exploratory analysis and data visualizations are shown to display 
 
 **Considering Month Sold** Should a seller consider what time of year to list there home? Should a buyer consider when to buy a home? It looks like the most home were sold in May over the two year period of data we have. Home sales look to be hot in the spring and summer months, and slow down only slighlty in the fall and more so in the winter. 
 <br>
-![title](images/sales_per_month.jpeg)
+![title](images/sales_per_month.png)
 <br>
 
 
