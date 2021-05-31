@@ -1,7 +1,7 @@
 # Analysis of King County Home Prices
 
 **Authors:** Aaron Cherry, Ryan Reilly
-![title](images/king_county_1.jpeg)
+<center>![title](images/king_county_1.jpeg)</center>
 
 ## Overview
 
