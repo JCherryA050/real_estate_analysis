@@ -92,13 +92,13 @@ This barchart shows that renovated homes increase the price of a home as you can
 
 #### Do prices of homes increase in certain areas of King County?
 
-![title](images/sales_heatmap.jpeg)
+![title](images/sales_heatmap.png)
 
 As we see from the heatmap, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
 
 #### Is there a particular zipcode that tends to sell pricier homes?
 
-![title](images/sales_zipcode.jpeg)
+![title](images/sales_zipcode.png)
 
 This chart shows the mean price of a home in each zipcode. The mean price tends to go up as you get closer to Bellevue, Mercer Island, and Seattle. 
 
