@@ -55,6 +55,7 @@ Of all the numerical variables, the one one house with 33 bedrooms does not make
 # Feature Engineering
 
 Any grade of a home that is 3 or less falls short of building contruction and design. Any grade that is 11 or above has a high quality of design. Any grade in between will have a medium quality.
+<br>
 
 These month columns were created so we could explore seasonality in sales over the two year period of data we have. 
 
@@ -63,26 +64,33 @@ These month columns were created so we could explore seasonality in sales over t
 #### Should a seller consider what time of year to list there home? Should a buyer consider when to buy a home?
 
 ![title](images/king_county_1.jpeg)
+<br>
 
 It looks like the most home were sold in May over the two year period of data we have. Home sales look to be hot in the spring and summer months, and slow down only slighlty in the fall and more so in the winter. 
 
 #### Do the number of bathrooms have an effect on the price of the house
 
 ![title](images/king_county_1.jpeg)
+<br>
 
 This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price. 
 
 #### Would there be a great price difference whether or not a home is on the waterfront?
 
 ![title](images/king_county_1.jpeg)
+<br>
+
 This barchart shows that waterfront homes are significantly more expensive than homes not on the waterfront. 
 
 ![title](images/king_county_1.jpeg)
+<br>
+
 This barchart shows that renovated homes increase the price of a home as you can see by the mean sales price of home renovated vs those that are not renovated.
 
 #### Do prices of homes increase in certain areas of King County?
 
 ![title](images/king_county_1.jpeg)
+<br>
 As we see from the heatmap, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
 
 #### Is there a particular zipcode that tends to sell pricier homes?
