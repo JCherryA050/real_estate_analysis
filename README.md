@@ -16,7 +16,7 @@ Blue Sky Realty is a large real estate agency that helps homeowners buy/sell hom
 
 ## Data Understanding
 
-The dataset consists of features, ID and date of sale for over 21,000 houses within the King County area between the May 2014 and May 2015. This data was aquired from through Kaggle and the original data can be found [here](https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885). The following table describes how each of the features are interpreted.
+The dataset consists of features, ID and date of sale for over 21,000 houses within the King County area between the May 2014 and May 2015. This data was aquired from through Kaggle and the original data can be found [here](https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885). The following table describes how each of the features are interpreted. This table was taken from a previous [study](https://www.slideshare.net/PawanShivhare1/predicting-king-county-house-prices) of the data.
 
 | Feature | Description|
 |:------- | :-------|
