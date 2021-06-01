@@ -119,6 +119,12 @@ It looks like we will need to transform the following variables because they are
 # Modeling
 
 #### First Simple Model
+[!title](images/model_1_homoskedasticity.png)
+
+[!title](images/model_1_qq.png)
+
+[!title](images_model_1_residuals.png)
+
 #### 2nd Model with more than 4 predictors
 
 # Conclusions
