@@ -128,13 +128,12 @@ It looks like we will need to transform the following variables because they are
 #### 2nd Model with more than 4 predictors
 
 # Conclusions
-**1. The Square footage of your home drives the sale price.**
 
-**2. Insert Text **
+1. Best to sell homes from the northern side of King County, and waterfront homes. Our analysis shows that as you move north in King County, homes tend to sell for a higher price. The prices also increase as you get closer to the big cities and closer to the waterfront.
 
-**3. Insert Text **
+2. Recommend clients to renovate to increase property value. Our analysis shows that renovated homes sell for a higher price than those homes not renovated. Our models show that renovating to increase square footage increases the sale price and consider adding extra bathrooms in the renovation as that also increases the price. Also consider improving the view of the home when renovating.
 
-**4. Insert Text **
+3. Consider selling in the late spring, early summer. The most homes wre sold in May for both years of our data. Homes tend to increase in sales during the spring and tend decrease slightly in the winter months.
 
 # Next Steps
 
