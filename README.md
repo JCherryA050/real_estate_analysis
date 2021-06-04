@@ -121,12 +121,23 @@ For the second model, we aimed to correct the non normally distributed target an
 
 #### 3rd Model
 For the third model, we were concerned with increasing the performance of the linear regression by adding more house features to the model. We showed a 58% increase in performance with a 78.9% confidence of fit. The continuous features as well as the target were log transformed and scaled so that the assumptions of linear regression were met. This can be seen from the QQ-plot and the Residual vs. Fitted graphs below. As you can se, the residuals are normal and homoskedastic thus keeping with the assumptions for linear regression.
+
 ![title](images/model_3_qq.png)
 ![title](images/model_3_homoskedasticity.png)
 
-#### 4th Model
-For the fourth model, we were concerned with the multicolinearities between some of the features and their effect on the 
+#### 4th Model (Final)
+For the fourth model, we were concerned with the multicolinearities between some of the features and their effect on the performance of the model. The following tabel shows the highly colinear variables. As the square foot of living was one of the highes correlated features with the sales price of the home, we decided to drop the features that we colinear with the feature. We also dropped the has_basement and log transformed square foot above ground features as they showed a low correlation with the sales price of the home.
 
+|pairs	|Colinearity|
+|:------- | :-------|
+|(sqft_above, sqft_living)|	0.876448|
+|(north_south, lat)|	0.832996|
+|(sqft_living, grade)|	0.762776|
+|(sqft_living, sqft_living15)|	0.756400|
+|(grade, sqft_above)|	0.756069|
+|(bathrooms, sqft_living)|	0.755755|
+
+The fourth model showed a slight decrease in performance with a 77.8% confidence of fit. This was to be expected as some of the features dropped showed a high correlation with the sales price. By removing multicolinearities, however, we improved the model by eliminating some violations of the assumptions of the linear regression.
 
 # Conclusions
 1. **Best to sell homes from the northern side of King County, and waterfront homes.** Our analysis shows that as you move north in King County, homes tend to sell for a higher price. The prices also increase as you get closer to the big cities and closer to the waterfront.
