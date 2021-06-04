@@ -139,7 +139,7 @@ For the fourth model, we were concerned with the multicolinearities between some
 The fourth model showed a slight decrease in performance with a 77.8% confidence of fit. This was to be expected as some of the features dropped showed a high correlation with the sales price. By removing multicolinearities, however, we improved the model by eliminating some violations of the assumptions of the linear regression.
 
 #### Model Conclusions
-Based on our final model, we can see that the 
+The final model showed that the location of the house, the square foot living area of the home, the overall grade given to the home, and whether or not the home was renovated had the highest coefficients showing that they were the most correlated with the sale price. The following figure shows the coefficients for the features used in the final model.
 
 ![Coefficients of Features](images/model_features.png)
 
