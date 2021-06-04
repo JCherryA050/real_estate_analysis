@@ -86,62 +86,62 @@ The following exploratory analysis and data visualizations are shown to display 
 ![title](images/sales_per_bathroom.png)
 
 
-**Considering Waterfront Homes** This barchart shows that waterfront homes are significantly more expensive on average than homes not on the waterfront. Homes on the waterfront look to be 3x more expensive in King County.
+**Considering Waterfront Homes** The barchart below shows that waterfront homes are significantly more expensive on average than homes not on the waterfront. Homes on the waterfront look to be 3x more expensive in King County.
 
 ![title](images/sales_per_waterfront.png)
 
-This barchart shows that waterfront homes are significantly more expensive than homes not on the waterfront. 
-#### Would there be a great price difference whether or not a home is renovated?
+
+**Considering Renovation** The barchart below shows that renovated homes increase the price of a home as you can see by the mean sales price of home renovated vs those that are not renovated. Renovating a home increases the average sale price by at least 25%
 ![title](images/sales_per_renovated.png)
 
-This barchart shows that renovated homes increase the price of a home as you can see by the mean sales price of home renovated vs those that are not renovated.
 
-#### Do prices of homes increase in certain areas of King County?
+
+**Considering the Location of the Home** As you can see from the heatmap below, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
+![title](images/sales_zipcode.png)
+
+The heat map below shows home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle.
 
 ![title](images/sales_heatmap.png)
 
-As we see from the heatmap, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
-
-#### Is there a particular zipcode that tends to sell pricier homes?
-
-![title](images/sales_zipcode.png)
-
-This chart shows the mean price of a home in each zipcode. The mean price tends to go up as you get closer to Bellevue, Mercer Island, and Seattle. 
-
-# Preprocessing and More Feature Engineering for Modeling
-
-The above chart is showing a high correlation with sqft_living and multiple other variables. We may need to consider removing qft_above, grade, sqft_living15, and bathrooms.
-
-It looks like we will need to transform the following variables because they are all heavily right positive skewed. We will be normalizing them using a log transformation. 
-
-- price, 
-- sqft_living, 
-- sqft_living15, 
-- sqft_lot, 
-- sqft_lot15, 
-- sqft_above, 
-- age
-
 # Modeling
+All models implemented are linear regression models using selected features. The models produced coefficients that gave an idea of correlations with the target: sale price of the home.
 
 #### First Simple Model
-#### 2nd Model with more than 4 predictors
+
+For the first model, we aimed to define a simple relationship with the square footage of the home and the selling price of the home. The square footage of the home was shown to be siginificant in determining the sale price of a house. For every one square foot increase, the sale price increases by $280. The model showed a small p value suggesting the overall significance of square footage; however, the R squared statistic suggests a 49.3% confidence level for the linear fit. The first model showed a violation of our assumption of normal distributions as can be seen by the QQ-plot and the Residual vs. Fitted graphs below:
+![title](images/model_1_qq.png)
+![title](images/model_1_homoskedasticity.png)
+
+
+#### 2nd Model
+For the second model, we aimed to correct the non normally distributed target and predictor of suqare foot of living. The second model performed slightly worse with a 45.5% confidence of fit. The heteroskedasticity of the residuals and the non-normalities of the target and predictor we corrected as can be seen in the QQ-plot and the Residual vs. Fitted graphs below:
+![title](images/model_1b_qq.png)
+![title](images/model_1b_homoskedasticity.png)
+
+#### 3rd Model
+For the third model, we were concerned with increasing the performance of the linear regression by adding more house features to the model. We showed a 58% increase in performance with a 78.9% confidence of fit. The continuous features as well as the target were log transformed and scaled so that the assumptions of linear regression were met. This can be seen from the QQ-plot and the Residual vs. Fitted graphs below. As you can se, the residuals are normal and homoskedastic thus keeping with the assumptions for linear regression.
+![title](images/model_3_qq.png)
+![title](images/model_3_homoskedasticity.png)
+
+#### 4th Model
+For the fourth model, we were concerned with the multicolinearities between some of the features and their effect on the 
+
 
 # Conclusions
-**1. The Square footage of your home drives the sale price.**
+1. **Best to sell homes from the northern side of King County, and waterfront homes.** Our analysis shows that as you move north in King County, homes tend to sell for a higher price. The prices also increase as you get closer to the big cities and closer to the waterfront.
 
-**2. Insert Text **
+2. **Recommend clients to renovate to increase property value.** Our analysis shows that renovated homes sell for a higher price than those homes not renovated. Our models show that renovating to increase square footage increases the sale price and consider adding extra bathrooms in the renovation as that also increases the price. Also consider improving the view of the home when renovating.
 
-**3. Insert Text **
-
-**4. Insert Text **
+3. **Consider selling in the late spring, early summer.** The most homes wre sold in May for both years of our data. Homes tend to increase in sales during the spring and tend decrease slightly in the winter months.
 
 # Next Steps
 
-Further analyses could provide even more insight into how you will advise your clients to buy or sell thier home. 
+Further analyses could provide even more insight into how you will advise your clients to buy or sell thier home.
 
-**Better idea of neighborhood and surrounding neighborhoods.** We could gather more qualitative data on surrounding neighborhoods such as neighborhood safety, population demographics, and other idicators that may predict the price of a home. You could get an idea of proximity to schools, grocery stores, the city. These may play.
+**Better idea of features of a home.** Other features that indacate home sale include the color of the home, number of windows, garage indicator, size of garage, pool indicator, size of lawn, full property size, flood indicater, style of the home, among others.
 
-**Better idea of pricing history.** We could look at when the home sold last and for how much. You could then compare the price increases across homes and see the average percentage increase for similer homes.
+**Better idea of neighborhood and surrounding neighborhoods.** We could gather more qualitative data on surrounding neighborhoods such as neighborhood safety, population demographics, and other idicators that may predict the price of a home. You could get an idea of proximity to schools, grocery stores, the city.
 
-**Better idea of sale history.** We had a fairly good sample of two years worth of data, but it would be good to gather even more years of sales data in King County further solidify reccomendations. There may be features of the home that are better at predicting sale price now then they were 5 or 10 years ago. 
+**Better idea of surrounding counties in Washington.** We could gather data from other counties and compare, county to county, how sale prices fluctuate. Other macro indicators of county could be political climate, social programs, broader proxiimity to major highways.
+
+**Better idea of sale history.** We had a fairly good sample of two years worth of data, but it would be good to gather even more years of sales data in King County further solidify reccomendations. There may be features of the home that are better at predicting sale price now then they were 5 or 10 years ago.
