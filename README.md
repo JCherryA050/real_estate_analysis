@@ -9,10 +9,11 @@ This project analyzes data for over 21,000 home sales in King County, WA during 
 
 ## Business Problem
 
-Blue Sky Realty is a large real estate agency that helps homeowners buy/sell homes. Blue Sky has a large presence on the west coast, primarily in California and Oregon. However, they still have not expanded to Washington, until now. This will be there first office in Washington and their knowledge of what drives home prices is limited. They will be starting in King County. Since they are new to King County, they have requested our assistance. Through our analysis, we are going to provide recommendations to Blue Sky based on the following:
+Blue Sky Realty is a large real estate agency that helps homeowners buy/sell homes. Blue Sky has a large presence on the west coast, primarily in California and Oregon. However, they still have not expanded to Washington, until now. This will be there first office in Washington and there knowledge of what drives home prices is limited. They will be starting in King County. Since they are new to King County, they have requested our assistance to find out what feature in a home increase the sell price in the county. Through our analysis, we are going to provide recommendations to Blue Sky based on the following:
 
 - Where to sell a home based on recent trends
-- Which features of the home will drive the sale price of your clients home
+- Whether to renovate and what kinds of renovations are best
+- What time of the year is best to sell homes
 
 ## Data Understanding
 
@@ -25,12 +26,12 @@ The dataset consists of features, ID and date of sale for over 21,000 houses wit
 |price| Price of each home sold|
 |bedrooms|  Number of bedrooms|
 |bathrooms|  Number of bathrooms, where .5 accounts for a room with a toilet but no shower|
-|sqft_living|  Square footage of the apartments interior living space|
+|sqft_living|  Square footage of the homes interior living space|
 |sqft_lot|  Square footage of the land space|
 |floors|  Number of floors|
-|waterfront|  A dummy variable for whether the apartment was overlooking the waterfront or not|
+|waterfront|  A dummy variable for whether the home was overlooking the waterfront or not|
 |view|  An index from 0 to 4 of how good the view of the property was|
-|condition|  An index from 1 to 5 on the condition of the apartment,|
+|condition|  An index from 1 to 5 on the condition of the home,|
 |grade|  An index from 1 to 13, where 1-3 falls short of building construction and design, 7 has an average level of construction and design, and 11-13 have a high quality level of construction and design.|
 |sqft_above|  The square footage of the interior housing space that is above ground level|
 |sqft_basement|  The square footage of the interior housing space that is below ground level|
@@ -47,9 +48,9 @@ Many of the features within the data set were sufficient for statistical analyse
 
 - **Waterfront**: There was missing information in this feature and it does not make sense for that value to be missing (the home is either on waterfront or it isn't). The missing data were filled with a 0 assuming most homes would not have a waterfront view.
 - **Year Renovated**: There was missing information for this feature and many houses were labeled '0.0'. It was assumed that both of which indicated houses that had never been renovated and were marked as a 0 for never renovated. The houses that had a year were then marked as a 1 symbolizing that the house had been renovated.
-- **View**: There was missing information for this feature, however, there were few houses missing this feature. The missing information was filled with the mode of 0 for the entire feild.
+- **View**: There was missing information for this feature, however, there were few houses missing this feature. The missing information was filled with the mode of 0 for the entire feild. Changed type from continuous to nominal.
 - **Date**: The data type was converted to a datetime and new columns were created for the month in order to view sales by season.
-**TODO: add variables that were changed from continuaous numeric to nominal**
+- **Id**: Dropped Id column
 
 #### Dealing with outliers
 
@@ -58,30 +59,35 @@ Of all the numerical variables, the one one house with 33 bedrooms and only 1620
 # Feature Engineering
 
 Some of the features within the data were recategorized to form a more complete understanding of the features that had a seemingly large impact on sale price. The major feature being the grade of the house. A new feature was made based on the grade of the house using the following schema:
-- **low** (< 3): Houses falling short of building design specifications.
-- **medium** : Houses with an overall average quality.
-- **high** (>= 11): Houses with a high quality of design.
-**TODO: add other features that were engineered for modeling**
 
+- **low** (grade<3): Houses falling short of building design specifications.
+- **medium** : Houses with an overall average quality.
+- **high** (grade>= 11): Houses with a high quality of design.
+
+Other Feature Engineering:
+- **Renovated**: Added column with values 1 (rennovated) and 0 (not renovated)
+- **Age**: Added age of the home from the start of the year 2016
+- **Season**: Added season the home was sold
+- **North-South** : Added column of whether the home was above or below latitude: 47.5 based on EDA
 # Exploratory Data Analysis
 
 The following exploratory analysis and data visualizations are shown to display the relationships between the features and the sale price. The purpose is to identify potential features that would have a high impact on the sale price and could potentially be used as predictors in our models.
 
 **Correlation** The following correlation table gives a summary of the features' correlation with the sale price of a house and each other. The table can be used to define the features that have a strong linear relationship with the sale price making them candidates for potential predictors in our models:
 
-
+![title](images/model_2_multicollinearity.png)
 
 **Considering Month Sold** Should a seller consider what time of year to list there home? Should a buyer consider when to buy a home? It looks like the most home were sold in May over the two year period of data we have. Home sales look to be hot in the spring and summer months, and slow down only slighlty in the fall and more so in the winter. 
 ![title](images/sales_per_month.png)
 
 
-- Do the number of bathrooms have an effect on the price of the house?
+**Considering Square Footage of the Home and Number of Bathrooms** This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price.
+
 ![title](images/sales_per_bathroom.png)
 
 
-This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price. 
+**Considering Waterfront Homes** This barchart shows that waterfront homes are significantly more expensive on average than homes not on the waterfront. Homes on the waterfront look to be 3x more expensive in King County.
 
-#### Would there be a great price difference whether or not a home is on the waterfront?
 ![title](images/sales_per_waterfront.png)
 
 This barchart shows that waterfront homes are significantly more expensive than homes not on the waterfront. 
