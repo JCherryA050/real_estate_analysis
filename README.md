@@ -113,7 +113,6 @@ For the first model, we aimed to define a simple relationship with the square fo
 ![title](images/model_1_qq.png)
 ![title](images/model_1_homoskedasticity.png)
 
-
 #### 2nd Model
 For the second model, we aimed to correct the non normally distributed target and predictor of suqare foot of living. The second model performed slightly worse with a 45.5% confidence of fit. The heteroskedasticity of the residuals and the non-normalities of the target and predictor we corrected as can be seen in the QQ-plot and the Residual vs. Fitted graphs below:
 ![title](images/model_1b_qq.png)
@@ -139,6 +138,11 @@ For the fourth model, we were concerned with the multicolinearities between some
 
 The fourth model showed a slight decrease in performance with a 77.8% confidence of fit. This was to be expected as some of the features dropped showed a high correlation with the sales price. By removing multicolinearities, however, we improved the model by eliminating some violations of the assumptions of the linear regression.
 
+#### Model Conclusions
+Based on our final model, we can see that the 
+
+![Coefficients of Features](images/model_features.png)
+
 # Conclusions
 1. **Best to sell homes from the northern side of King County, and waterfront homes.** Our analysis shows that as you move north in King County, homes tend to sell for a higher price. The prices also increase as you get closer to the big cities and closer to the waterfront.
 
@@ -160,12 +164,11 @@ Further analyses could provide even more insight into how you will advise your c
 
 # Contributers
 Ryan Reilly
-Email: ryan.m.reilly@gmail.com
-Github: https://github.com/ryanreilly
-Linkedin:https://www.linkedin.com/in/ryanreilly1/
-
+- Email: ryan.m.reilly@gmail.com
+- Github: https://github.com/ryanreilly
+- Linkedin:https://www.linkedin.com/in/ryanreilly1/
 
 Aaron Cherry
-Email: cherrya050@gmail@.com
-Github: https://github.com/JCherryA050
-Linkedin: https://www.linkedin.com/in/aaron-cherry-8aa728124/
+- Email: cherrya050@gmail@.com
+- Github: https://github.com/JCherryA050
+- Linkedin: https://www.linkedin.com/in/aaron-cherry-8aa728124/
