@@ -109,17 +109,17 @@ All models implemented are linear regression models using selected features. The
 
 #### First Simple Model
 
-For the first model, we aimed to define a simple relationship with the square footage of the home and the selling price of the home. The square footage of the home was shown to be siginificant in determining the sale price of a house. For every one square foot increase, the sale price increases by $280. The model showed a small p value suggesting the overall significance of square footage; however, the R squared statistic suggests a 49.3% confidence level for the linear fit. The first model showed a violation of our assumption of normal distributions as can be seen by the QQ-plot and the Residual vs. Fitted graphs below:
+For the first model, we aimed to define a simple relationship with the square footage of the home and the selling price of the home. The square footage of the home was shown to be siginificant in determining the sale price of a house. For every one square foot increase, the sale price increases by $280. The model showed a small p value suggesting the overall significance of square footage; however, the R-squared value, .493 shows a subpar fit of the data. The first model showed a violation of our assumption of normal distributions as can be seen by the QQ-plot and the Residual vs. Fitted graphs below:
 ![title](images/model_1_qq.png)
 ![title](images/model_1_homoskedasticity.png)
 
 #### 2nd Model
-For the second model, we aimed to correct the non normally distributed target and predictor of suqare foot of living. The second model performed slightly worse with a 45.5% confidence of fit. The heteroskedasticity of the residuals and the non-normalities of the target and predictor we corrected as can be seen in the QQ-plot and the Residual vs. Fitted graphs below:
+For the second model, we aimed to correct the non normally distributed target and predictor of suqare foot of living. The second model performed slightly worse with an R-squared value of 0.455. The heteroskedasticity of the residuals and the non-normalities of the target and predictor we corrected as can be seen in the QQ-plot and the Residual vs. Fitted graphs below:
 ![title](images/model_1b_qq.png)
 ![title](images/model_1b_homoskedasticity.png)
 
 #### 3rd Model
-For the third model, we were concerned with increasing the performance of the linear regression by adding more house features to the model. We showed a 58% increase in performance with a 78.9% confidence of fit. The continuous features as well as the target were log transformed and scaled so that the assumptions of linear regression were met. This can be seen from the QQ-plot and the Residual vs. Fitted graphs below. As you can se, the residuals are normal and homoskedastic thus keeping with the assumptions for linear regression.
+For the third model, we were concerned with increasing the performance of the linear regression by adding more house features to the model. We showed a 58% increase in performance with an R-squared of .789. The continuous features as well as the target were log transformed and scaled so that the assumptions of linear regression were met. This can be seen from the QQ-plot and the Residual vs. Fitted graphs below. As you can se, the residuals are normal and homoskedastic thus keeping with the assumptions for linear regression.
 
 ![title](images/model_3_qq.png)
 ![title](images/model_3_homoskedasticity.png)
@@ -136,7 +136,7 @@ For the fourth model, we were concerned with the multicolinearities between some
 |(grade, sqft_above)|	0.756069|
 |(bathrooms, sqft_living)|	0.755755|
 
-The fourth model showed a slight decrease in performance with a 77.8% confidence of fit. This was to be expected as some of the features dropped showed a high correlation with the sales price. By removing multicolinearities, however, we improved the model by eliminating some violations of the assumptions of the linear regression.
+The fourth model showed a slight decrease in performance with an R-squared value of .778. This was to be expected as some of the features dropped showed a high correlation with the sales price. By removing multicolinearities, however, we improved the model by eliminating some violations of the assumptions of the linear regression.
 
 #### Model Conclusions
 The final model showed that the location of the house, the square foot living area of the home, the overall grade given to the home, and whether or not the home was renovated had the highest coefficients showing that they were the most correlated with the sale price. The following figure shows the coefficients for the features used in the final model.
