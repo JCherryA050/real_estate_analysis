@@ -73,7 +73,7 @@ Other Feature Engineering:
 
 The following exploratory analysis and data visualizations are shown to display the relationships between the features and the sale price. The purpose is to identify potential features that would have a high impact on the sale price and could potentially be used as predictors in our models.
 
-**Correlation** The following correlation table gives a summary of the features' correlation with the sale price of a house and each other. The table can be used to define the features that have a strong linear relationship with the sale price making them candidates for potential predictors in our models:
+**Correlation** The following correlation table gives a summary of the features' correlation with the sale price of a house and each other. The table can be used to define the features that have a strong linear relationship with the sale price making them candidates for potential predictors in our models: 
 
 ![title](images/model_2_multicollinearity.png)
 
@@ -81,26 +81,26 @@ The following exploratory analysis and data visualizations are shown to display 
 ![title](images/sales_per_month.png)
 
 
-**Considering Square Footage of the Home and Number of Bathrooms** This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price.
+**Considering Square Footage of the Home and Number of Bathrooms** This scatter shows a positive relationship between square feet and sales price. You can see as the points get darker towards the top, the more bathrooms there are for a home. This shows that the number of bathrooms could help indicate the sale price. 
 
 ![title](images/sales_per_bathroom.png)
 
 
-**Considering Waterfront Homes** The barchart below shows that waterfront homes are significantly more expensive on average than homes not on the waterfront. Homes on the waterfront look to be 3x more expensive in King County.
+**Considering Waterfront Homes** The barchart below shows that waterfront homes are significantly more expensive on average than homes not on the waterfront. Homes on the waterfront look to be 3x more expensive in King County. 
 
 ![title](images/sales_per_waterfront.png)
 
 
-**Considering Renovation** The barchart below shows that renovated homes increase the price of a home as you can see by the mean sales price of home renovated vs those that are not renovated. Renovating a home increases the average sale price by at least 25%
+**Considering Renovation** The barchart below shows that renovated homes increase the price of a home as you can see by the mean sales price of home renovated vs those that are not renovated. Renovating a home increases the average sale price by at least 25%. 
 ![title](images/sales_per_renovated.png)
 
 
 
-**Considering the Location of the Home** As you can see from the heatmap below, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle.
+**Considering the Location of the Home** As you can see from the heatmap below, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
 
 ![title](images/sales_zipcode.png)
 
-The heat map below shows home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle.
+The heat map below shows home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
 
 ![title](images/sales_heatmap.png)
 
@@ -109,23 +109,23 @@ All models implemented are linear regression models using selected features. The
 
 #### First Simple Model
 
-For the first model, we aimed to define a simple relationship with the square footage of the home and the selling price of the home. The square footage of the home was shown to be siginificant in determining the sale price of a house. For every one square foot increase, the sale price increases by $280. The model showed a small p value suggesting the overall significance of square footage; however, the R-squared value, .493 shows a subpar fit of the data. The first model showed a violation of our assumption of normal distributions as can be seen by the QQ-plot and the Residual vs. Fitted graphs below:
+For the first model, we aimed to define a simple relationship with the square footage of the home and the selling price of the home. The square footage of the home was shown to be siginificant in determining the sale price of a house. For every one square foot increase, the sale price increases by $280. The model showed a small p value suggesting the overall significance of square footage; however, the R-squared value, .493 shows a subpar fit of the data. The first model showed a violation of our assumption of normal distributions as can be seen by the QQ-plot and the Residual vs. Fitted graphs below: 
 ![title](images/model_1_qq.png)
 ![title](images/model_1_homoskedasticity.png)
 
 #### 2nd Model
-For the second model, we aimed to correct the non normally distributed target and predictor of suqare foot of living. The second model performed slightly worse with an R-squared value of 0.455. The heteroskedasticity of the residuals and the non-normalities of the target and predictor we corrected as can be seen in the QQ-plot and the Residual vs. Fitted graphs below:
+For the second model, we aimed to correct the non normally distributed target and predictor of suqare foot of living. The second model performed slightly worse with an R-squared value of 0.455. The heteroskedasticity of the residuals and the non-normalities of the target and predictor we corrected as can be seen in the QQ-plot and the Residual vs. Fitted graphs below: 
 ![title](images/model_1b_qq.png)
 ![title](images/model_1b_homoskedasticity.png)
 
 #### 3rd Model
-For the third model, we were concerned with increasing the performance of the linear regression by adding more house features to the model. We showed a 58% increase in performance with an R-squared of .789. The continuous features as well as the target were log transformed and scaled so that the assumptions of linear regression were met. This can be seen from the QQ-plot and the Residual vs. Fitted graphs below. As you can se, the residuals are normal and homoskedastic thus keeping with the assumptions for linear regression.
+For the third model, we were concerned with increasing the performance of the linear regression by adding more house features to the model. We showed a 58% increase in performance with an R-squared of .789. The continuous features as well as the target were log transformed and scaled so that the assumptions of linear regression were met. This can be seen from the QQ-plot and the Residual vs. Fitted graphs below. As you can se, the residuals are normal and homoskedastic thus keeping with the assumptions for linear regression. 
 
 ![title](images/model_3_qq.png)
 ![title](images/model_3_homoskedasticity.png)
 
 #### 4th Model (Final)
-For the fourth model, we were concerned with the multicolinearities between some of the features and their effect on the performance of the model. The following tabel shows the highly colinear variables. As the square foot of living was one of the highes correlated features with the sales price of the home, we decided to drop the features that we colinear with the feature. We also dropped the has_basement and log transformed square foot above ground features as they showed a low correlation with the sales price of the home.
+For the fourth model, we were concerned with the multicolinearities between some of the features and their effect on the performance of the model. The following tabel shows the highly colinear variables. As the square foot of living was one of the highes correlated features with the sales price of the home, we decided to drop the features that we colinear with the feature. We also dropped the has_basement and log transformed square foot above ground features as they showed a low correlation with the sales price of the home. 
 
 |pairs	|Covariance|
 |:------- | :-------|
@@ -139,7 +139,7 @@ For the fourth model, we were concerned with the multicolinearities between some
 The fourth model showed a slight decrease in performance with an R-squared value of .778. This was to be expected as some of the features dropped showed a high correlation with the sales price. By removing multicolinearities, however, we improved the model by eliminating some violations of the assumptions of the linear regression.
 
 #### Model Conclusions
-The final model showed that the location of the house, the square foot living area of the home, the overall grade given to the home, and whether or not the home was renovated had the highest coefficients showing that they were the most correlated with the sale price. The following figure shows the coefficients for the features used in the final model.
+The final model showed that the location of the house, the square foot living area of the home, the overall grade given to the home, and whether or not the home was renovated had the highest coefficients showing that they were the most correlated with the sale price. The following figure shows the coefficients for the features used in the final model. 
 
 ![Coefficients of Features](images/model_features.png)
 
