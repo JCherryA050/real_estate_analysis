@@ -3,9 +3,9 @@
 **Authors:** Aaron Cherry, Ryan Reilly
 ![title](images/king_county_1.jpeg)
 
-## Overview
-
-This project analyzes data for over 21,000 home sales in King County, WA during 2014 and 2015. The goal of this analysis is to determine what features of a house drive the sale price. This will be done through exploratory daa analysis and inferential linear regression modeling of the housing data.
+>## Overview
+>
+>This project analyzes data for over 21,000 home sales in King County, WA during 2014 and 2015. The goal of this analysis is to >determine what features of a house drive the sale price. This will be done through exploratory daa analysis and inferential >linear regression modeling of the housing data.
 
 ## Business Problem
 
@@ -73,7 +73,7 @@ Other Feature Engineering:
 
 The following exploratory analysis and data visualizations are shown to display the relationships between the features and the sale price. The purpose is to identify potential features that would have a high impact on the sale price and could potentially be used as predictors in our models.
 
-<p>**Correlation** The following correlation table gives a summary of the features' correlation with the sale price of a house and each other. The table can be used to define the features that have a strong linear relationship with the sale price making them candidates for potential predictors in our models:</p>
+**Correlation** The following correlation table gives a summary of the features' correlation with the sale price of a house and each other. The table can be used to define the features that have a strong linear relationship with the sale price making them candidates for potential predictors in our models:
 
 ![title](images/model_2_multicollinearity.png)
 
