@@ -169,6 +169,6 @@ Ryan Reilly
 - Linkedin:https://www.linkedin.com/in/ryanreilly1/
 
 Aaron Cherry
-- Email: cherrya050@gmail@.com
+- Email: cherrya050@gmail.com
 - Github: https://github.com/JCherryA050
 - Linkedin: https://www.linkedin.com/in/aaron-cherry-8aa728124/
