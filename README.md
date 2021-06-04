@@ -96,7 +96,8 @@ The following exploratory analysis and data visualizations are shown to display 
 
 
 
-**Considering the Location of the Home** As you can see from the heatmap below, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle. 
+**Considering the Location of the Home** As you can see from the heatmap below, home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle.
+
 ![title](images/sales_zipcode.png)
 
 The heat map below shows home prices increase as you move north in King County. The highest home prices tend to be those neighborhoods near water and closer to the downtown Seattle and Bellevue area. Particularly expensive areas include Medina, Mercer Island, Queen Ann in Seattle and Madison Park in Seattle.
