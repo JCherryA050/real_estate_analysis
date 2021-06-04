@@ -160,18 +160,12 @@ Further analyses could provide even more insight into how you will advise your c
 
 # Contributers
 Ryan Reilly
-
 Email: ryan.m.reilly@gmail.com
-
 Github: https://github.com/ryanreilly
-
 Linkedin:https://www.linkedin.com/in/ryanreilly1/
 
 
 Aaron Cherry
-
 Email: cherrya050@gmail@.com
-
 Github: https://github.com/JCherryA050
-
 Linkedin: https://www.linkedin.com/in/aaron-cherry-8aa728124/
