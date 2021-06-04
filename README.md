@@ -3,9 +3,9 @@
 **Authors:** Aaron Cherry, Ryan Reilly
 ![title](images/king_county_1.jpeg)
 
->## Overview
->
->This project analyzes data for over 21,000 home sales in King County, WA during 2014 and 2015. The goal of this analysis is to >determine what features of a house drive the sale price. This will be done through exploratory daa analysis and inferential >linear regression modeling of the housing data.
+## Overview
+
+This project analyzes data for over 21,000 home sales in King County, WA during 2014 and 2015. The goal of this analysis is to determine what features of a house drive the sale price. This will be done through exploratory daa analysis and inferential linear regression modeling of the housing data.
 
 ## Business Problem
 
@@ -157,3 +157,14 @@ Further analyses could provide even more insight into how you will advise your c
 **Better idea of surrounding counties in Washington.** We could gather data from other counties and compare, county to county, how sale prices fluctuate. Other macro indicators of county could be political climate, social programs, broader proxiimity to major highways.
 
 **Better idea of sale history.** We had a fairly good sample of two years worth of data, but it would be good to gather even more years of sales data in King County further solidify reccomendations. There may be features of the home that are better at predicting sale price now then they were 5 or 10 years ago.
+
+# Contributers
+Ryan Reilly
+Email: ryan.m.reilly@gmail.com
+Github: https://github.com/ryanreilly
+Linkedin:https://www.linkedin.com/in/ryanreilly1/
+
+Aaron Cherry
+Email: cherrya050@gmail@.com
+Github: https://github.com/JCherryA050
+Linkedin: https://www.linkedin.com/in/aaron-cherry-8aa728124/
