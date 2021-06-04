@@ -128,7 +128,7 @@ For the third model, we were concerned with increasing the performance of the li
 #### 4th Model (Final)
 For the fourth model, we were concerned with the multicolinearities between some of the features and their effect on the performance of the model. The following tabel shows the highly colinear variables. As the square foot of living was one of the highes correlated features with the sales price of the home, we decided to drop the features that we colinear with the feature. We also dropped the has_basement and log transformed square foot above ground features as they showed a low correlation with the sales price of the home.
 
-|pairs	|Colinearity|
+|pairs	|Covariance|
 |:------- | :-------|
 |(sqft_above, sqft_living)|	0.876448|
 |(north_south, lat)|	0.832996|
